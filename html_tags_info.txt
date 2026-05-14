@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<!-- Its sole purpose is to tell the browser to render the page using modern HTML5 standards.     -->
+
+<html lang="en" dir="ltr">
+    <!-- <head> and <body> go inside -->
+</html>
+<!-- Tells the browser "this is an HTML document" and provides foundational metadata like language and text direction.  -->
+<!-- attributes of html tag are that used mostly are 'lang' and 'dir'  -->
+<!-- (lang="en" or "es" or "fr" or "ar") / (dir="rtl" or "ltr")(rtl=right to left)(ltr=left to right) -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Title</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+
+Acts as a metadata container for the entire document. It holds information about the page, not content meant for direct display.
+Controls how the browser interprets and renders the page (character encoding, viewport scaling, external styles/scripts, SEO tags, social sharing previews, etc.)
+Essential for accessibility, performance, search engine optimization, and cross-browser compatibility.
+
+<body id="app-root" class="theme-light">
+  <!-- Your visible content -->
+</body>
+
+Contains all visible and interactive content of the webpage (text, images, videos, forms, buttons, layouts, etc.).
+Acts as the primary rendering container that the browser's layout engine paints to the screen.
+Serves as a natural target for global event handling, CSS resets, scroll behavior, and accessibility landmarks.\
+
+<title>Title of the Page</title>
+
+Defines the official title of the document displayed in browser tabs, bookmarks, history, and window titles.
+Critical for SEO: Search engines use it as the primary clickable headline in search results.
+Essential for accessibility: Screen readers announce the <title> first when a page loads, helping users orient themselves.
+Acts as the fallback title when content is shared on social platforms (if Open Graph/Twitter Card tags are missing).
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Clear, unique page summary under 160 characters.">
+<title>Page Title</title>
+
+Provides machine-readable metadata about the document that isn't displayed on the page.
+Controls browser behavior: character encoding, viewport scaling, theme colors, caching, auto-refreshes, and security policies.
+Supplies SEO signals & social previews: search engines and social platforms read <meta> to generate snippets, thumbnails, and indexing rules.
+Enables conditional styling/application via the media attribute (e.g., light/dark mode preferences).
+
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://example.com/this-page">
+
+Establishes relationships between the current document and external resources without embedding them inline.
+Loads CSS, favicons, web fonts, PWA manifests, feeds, and alternate language/SEO versions.
+Drastically improves performance via resource hints (preload, prefetch, preconnect, dns-prefetch) that tell the browser what to fetch early.
+Enables security & integrity checks (integrity, crossorigin, referrerpolicy) for cross-origin assets.
+
+<script src="app.js" defer></script>
+
+Embeds or references executable JavaScript to add interactivity, manipulate the DOM, handle events, fetch data, and power modern web applications.
+Controls loading & execution timing (async, defer) to prevent render-blocking and optimize Core Web Vitals.
+Enables modular architecture (type="module") for scoped imports/exports, tree-shaking, and dependency management.
+Supports security & compliance via Subresource Integrity (integrity), Content Security Policy (nonce), CORS handling, and referrer control.
+
+<style>
+  .class_instance{
+
+  }
+  
+</style>
+
+Embeds CSS directly inside the HTML document, eliminating extra HTTP requests for small or critical styles.
+Ideal for critical above-the-fold CSS, dynamic/style injection, component-scoped styling, or environments where external CSS is blocked (e.g., HTML emails).
+Keeps base resets, CSS custom properties, and initial layout rules tightly coupled to the markup they style.
