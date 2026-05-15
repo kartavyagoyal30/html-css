@@ -188,5 +188,421 @@ This is the pre tag
       <p>This is inside div.</p>
     </div>
 
+    <!-- <header> tag is used to define the header section of a webpage or a section. -->
+    <!-- 
+    It usually contains:
+    Logo
+    Website title
+    Navigation links
+    Intro content 
+    Search bar -->
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <!-- <footer> tag is used to define the bottom section of a webpage or section.
+      It usually contains:
+      Copyright info
+      Contact details
+      Social media links
+      Quick links
+      Author info
+      Terms & policies -->
+
+      <footer>
+    <p>© 2026 My Website</p>
+
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact</a>
+    </footer>
+
+    <!-- <main> tag is used to define the main content of a webpage.
+    It contains the primary content directly related to the page topic. -->
+
+    <main>
+    Main content here
+    </main>
+
+    <!-- "section" is used to group related content together.
+    It represents a thematic section of a webpage.
+    Common Uses
+    Chapters
+    Services section
+    About section
+    Contact section
+    Features section -->
+
+    <section>
+    <h2>About Us</h2>
+    <p>We create websites.</p>
+    </section>
+
+<!-- <article> is used for independent/self-contained content.
+The content should make sense even if taken out of the webpage.
+Common Uses 
+Blog posts
+News articles
+Forum posts
+Product cards
+Comments --> 
+
+<article>
+    <h2>HTML Tutorial</h2>
+    <p>Learn HTML basics.</p>
+</article>
+
+<!-- <aside> is used for side content related to the main content.
+Usually shown as a sidebar.
+Common Uses
+Sidebar
+Advertisements
+Related posts
+Tips
+Extra information -->
+
+<aside>
+    <h3>Related Links</h3>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+</aside>
+
+
+<!-- "ul" is Used when the order of items does not matter. -->
+ <ul>
+  <li>Apple</li>
+  <li>Mango</li>
+  <li>Banana</li>
+</ul>
+
+<!-- "ol" is Used when the order of items matters. -->
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+<!-- "li" is used to define a list item. It can be used inside both ordered and unordered lists. -->
+<li>Item</li>
+
+<!-- "dl" is used to define a description list. It is used to group terms and their descriptions.
+Used for:
+terms & definitions
+questions & answers
+key-value style data -->
+
+<!-- "dt" is used to define a term in a description list. It is used inside a "dl" element. -->
+<!-- Represents the term/title/name. -->
+
+<!-- dd is used to define a description in a description list. It is used inside a "dl" element. Represents the description/details of the term defined by "dt". -->
+<!-- Represents the description/definition of the term.   -->
+
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+
+  <dt>CSS</dt>
+  <dd>Used for styling webpages</dd>
+</dl>
+
+<!-- <table>
+Main container for creating a table.
+<tr> — Table Row
+Creates a horizontal row.
+<th> — Table Header Cell
+Used for headings
+<td> — Table Data Cell
+Stores normal table data.
+<thead>
+Contains heading rows.
+<tbody>
+Contains main table data
+<tfoot>
+Contains footer or summary rows.
+<caption>
+Adds table title.
+<colgroup> and <col>
+Used for styling columns. -->
+
+<table border="1">
+
+  <caption>Student Data</caption>
+  <colgroup>
+    <col style="background-color: lightblue;">
+    <col style="background-color: lightyellow;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Marks</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Kartavya</td>
+      <td>95</td>
+    </tr>
+
+    <tr>
+      <td>Rahul</td>
+      <td>88</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="2">Total Students: 2</td>
+    </tr>
+  </tfoot>
+</table>
+
+<!-- <form>
+Main container for all form elements. 
+<input>
+Most commonly used form element.
+Types include:
+text
+password
+email
+number
+checkbox
+radio
+file
+date
+submit 
+
+<textarea>
+Used for multi-line text. 
+
+<button>
+Clickable button.
+Button types:
+submit
+reset
+button 
+
+<select> and <option>
+Creates dropdown menu
+
+<optgroup>
+Groups dropdown items.
+
+<label>
+Associates text with input.
+Improves:
+accessibility
+click behavior
+
+<fieldset> and <legend>
+Used to group related fields.
+
+<datalist>
+Provides autocomplete suggestions.
+
+<output>
+Displays calculated result.
+
+<progress>
+Shows task progress.
+
+<meter>
+Represents measurement within range.
+Example:
+battery
+disk usage
+score
+-->
+
+<form action="/submit" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Enter name">
+</form>
+
+<textarea rows="4" cols="30" placeholder="Enter your message..."></textarea>
+
+<button type="submit">Submit</button>
+
+<select>
+  <option>India</option>
+  <option>USA</option>
+  <option>Japan</option>
+</select>
+
+<optgroup>
+
+<select>
+
+  <optgroup label="Asia">
+    <option>India</option>
+    <option>Japan</option>
+  </optgroup>
+
+  <optgroup label="Europe">
+    <option>France</option>
+    <option>Germany</option>
+  </optgroup>
+
+</select>
+
+<fieldset>
+
+  <legend>Personal Information</legend>
+
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Email">
+
+</fieldset>
+
+<input list="browsers">
+
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Edge">
+</datalist>
+
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+
+  <input type="number" id="a" value="0">
+  +
+  <input type="number" id="b" value="0">
+
+  =
+
+  <output name="result"></output>
+
+</form>
+
+<progress value="70" max="100"></progress>
+
+<meter value="0.7">70%</meter>
+
+
+<form>
+
+  <fieldset>
+
+    <legend>Registration Form</legend>
+
+    <label for="name">Name</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <label for="email">Email</label>
+    <input type="email" id="email">
+
+    <br><br>
+
+    <label>Gender</label>
+
+    <input type="radio" name="gender"> Male
+    <input type="radio" name="gender"> Female
+
+    <br><br>
+
+    <label>Country</label>
+
+    <select>
+      <option>India</option>
+      <option>USA</option>
+    </select>
+
+    <br><br>
+
+    <textarea placeholder="Message"></textarea>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+  </fieldset>
+
+<!-- <address>
+Used for:
+author information
+contact details
+company address
+email/phone links
+
+Usually placed inside:
+<footer>
+article/contact sections 
+
+<details>
+Creates expandable/collapsible content.
+Useful for:
+
+FAQs
+hidden explanations
+dropdown information
+
+<summary>
+Defines visible title for <details>.
+Must be inside <details>.
+
+<dialog>
+Used to create:
+
+popup boxes
+modal windows
+confirmation dialogs
+
+<template>
+Stores hidden reusable HTML.
+Content inside <template>:
+is not rendered immediately
+can be cloned using JavaScript
+Useful for:
+
+dynamic UI
+reusable components
+cards/lists
+
+<slot>
+Used in Web Components.
+Acts as placeholder where custom content is inserted.
+-->
+
+<address>
+  Written by Kartavya Goyal<br>
+  Email: kartavya@example.com<br>
+  Jaipur, Rajasthan
+</address>
+
+<details>
+  <summary>What is HTML?</summary>
+
+  HTML stands for HyperText Markup Language.
+</details>
+
+<dialog open>
+  <p>This is a dialog box</p>
+  <button>Close</button>
+</dialog>
+
+<template id="cardTemplate">
+
+  <div class="card">
+    <h2>Title</h2>
+    <p>Description</p>
+  </div>
+
+</template>
+
+<template id="myTemplate">
+
+  <div>
+    <slot></slot>
+  </div>
+
+</template>
+</form>
   </body>
 </html>
