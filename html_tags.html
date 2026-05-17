@@ -428,6 +428,12 @@ score
 
 <button type="submit">Submit</button>
 
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <label for="fileUpload">Upload your resume:</label>
+  <input type="file" id="fileUpload" name="resume" accept=".pdf,.doc,.docx" required>
+  <button type="submit">Submit</button>
+</form>
+
 <select>
   <option>India</option>
   <option>USA</option>
@@ -604,5 +610,83 @@ Acts as placeholder where custom content is inserted.
 
 </template>
 </form>
+
+<!-- del is used to represent deleted text. It is often displayed with a strikethrough to indicate that the text has been removed or is no longer relevant. --> -->
+<del>This is deleted text</del>
+
+<!-- ins is used to represent inserted text. It is often displayed with an underline to indicate that the text has been added or is new. --> -->
+<ins>This is inserted text</ins>
+
+
+<table style="width: 50%; border-collapse: collapse;" border="1">
+  <tr style="background-color: #f2f2f2;">
+    <th>Name</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>Mohit</td>
+    <td>Delhi</td>
+  </tr>
+  <tr>
+    <td>Aarav</td>
+    <td>Mumbai</td>
+  </tr>
+</table>
+
+<table border="1">
+  <tr>
+    <td>
+      Outer Table - Cell 1
+      <table border="1">
+        <tr>
+          <td>Nested Table - Cell 1</td>
+          <td>Nested Table - Cell 2</td>
+        </tr>
+      </table>
+    </td>
+    <td>Outer Table - Cell 2</td>
+  </tr>
+</table>
+
+<label for="phone">Phone Number:</label>
+<input type="text" id="phone" name="phone" pattern="\d{10}" title="Enter 10 digit phone number" required>
+
+
+
+<button onclick="getLocation()">Get My Location</button>
+<p id="location"></p>
+
+<script>
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+      document.getElementById('location').innerText = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPosition(position) {
+    document.getElementById('location').innerText =
+      "Latitude: " + position.coords.latitude + 
+      ", Longitude: " + position.coords.longitude;
+  }
+
+  function showError(error) {
+    switch(error.code) {
+      case error.PERMISSION_DENIED:
+        alert("User denied the request for Geolocation.");
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert("Location information is unavailable.");
+        break;
+      case error.TIMEOUT:
+        alert("The request to get user location timed out.");
+        break;
+      case error.UNKNOWN_ERROR:
+        alert("An unknown error occurred.");
+        break;
+    }
+  }
+</script>
   </body>
 </html>
